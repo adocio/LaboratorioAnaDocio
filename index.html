@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Laboratorio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js"></script>
+  </head>
+
+  <body>
+      <h1>Create account</h1>
+
+      <form action="./procesarFormulario.php" name="Create account" onsubmit="return validateForm()">
+        <fieldset>
+          <div class="form-group">
+            <label for="Nombre">Nombre:</label></br>
+            <input type="text" id="Nombre" name="Nombre" pattern="[A-Za-z]+" title="No puedes utilizar números en tu nombre." required>
+            <span class="error-icon"></span>
+            <span class="error-message"></span>
+          </div></br>
+          <div class="form-group">
+            <label for="Email">Email:</label></br>
+            <input type="email" id="Email" name="Email" maxlength="60" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="El correo electrónico utilizado es inválido." required>
+            <span class="error-icon"></span>
+            <span class="error-message"></span>
+          </div></br>
+          <div class="form-group">
+            <label for="Clave">Clave:</label></br>
+            <input type="password" id="Clave" name="Clave" minlength="8" required>
+            <span class="error-icon"></span>
+            <span class="error-message"></span>
+          </div></br>
+          <div class="form-group">
+            <label for="ConfirmarClave">Confirmar clave:</label></br>
+            <input type="password" id="ConfirmarClave" name="ConfirmarClave" minlength="8" required>
+            <span class="error-icon"></span>
+            <span class="error-message"></span>
+          </div></br>
+          <div class="form-group">
+            <input type="submit" value="Submit">
+          </div>
+        </fieldset>
+      </form>
+  </body>
+</html>
